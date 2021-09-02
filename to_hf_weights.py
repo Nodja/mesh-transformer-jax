@@ -453,8 +453,8 @@ def save_config_to_hf_format(params: dict, torch_dtype: str, output_path: FluidP
         "use_cache": True,
         "vocab_size": params["n_vocab"],
     }
-
-    with open(output_path / "config.json", "w") as file:
+    
+    with (output_path / "config.json").open("w") as file:
         json.dump(config, file, indent=2)
 
 
